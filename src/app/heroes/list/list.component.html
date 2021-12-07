@@ -1,0 +1,12 @@
+<p>list works!</p>
+<button (click)="eraseHero()">Erase</button>
+<span *ngIf="hero; else notErased">{{hero}} was erased successfully!</span>
+
+<ng-template #notErased>
+    <span>Nothing to show</span>
+</ng-template>
+
+
+<ul *ngFor="let hero of heroes; let i = index">
+    <li>{{i + 1}}-{{hero}}</li>
+</ul>
